@@ -5,8 +5,7 @@ eclipse（j2ee）+ MinGW-w64 + CDT（plugin）
 eclipse和CDT的安装这里就不赘述，主要说的是MinGW-w64的安装。
 MinGW-w64的安装：  
 1.到sourceforge上下载一个MinGW-builds  
-![](file:///C:/Users/Administrator/Desktop/pic/1.png)
-图1  
+![](https://raw.githubusercontent.com/CryChan/JniDemo/master/pic/1.png)
 
 2.打开根据机子的配置安装32/64bit版本：  
 图2    
