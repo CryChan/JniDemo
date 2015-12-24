@@ -8,7 +8,7 @@ MinGW-w64的安装：
 ![](https://raw.githubusercontent.com/CryChan/JniDemo/master/pic/1.png)
 
 2.打开根据机子的配置安装32/64bit版本：  
-图2    
+![](https://raw.githubusercontent.com/CryChan/JniDemo/master/pic/2.png)   
 x86_64:64位的版本  
 i686：32位的版本  
 
@@ -24,8 +24,9 @@ i686：32位的版本
 	        System.loadLibrary("lib***");  
 	}
 这个`lib***`是c++编译生成的.dll文件，为了让程序执行时找到，有两种设置方式。  
-方法一：放在project指定的java.library.path中，java.library.path的配置在project-->properties中：图3  
-方法二：设置运行时的参数，依次点击run as--->run configurations,在点击Arguments，在Vm arguments处填入如下：
+方法一：放在project指定的java.library.path中，java.library.path的配置在project-->properties中：
+![](https://raw.githubusercontent.com/CryChan/JniDemo/master/pic/3.png)  
+方法二：设置运行时的参数，依次点击run as--->run configurations,在点击Arguments，在Vm arguments处填入如下:  
 `-Djava.library.path="${workspace_loc}\JniTest\libs;${env_var:PATH}"`
 
 2.使用cmd进入这个project所在的目录，输入命令：`javah -classpath . -jni 类路径.JNIOpKey(提供的接口)`，这时候会生成一个`类路径.JNIOpKey(提供的接口).h`文件
@@ -33,7 +34,7 @@ i686：32位的版本
 3.把/jdk/include中的jni.h和/jdk/include/win32中的jni_md.h这两个文件copy出来，放到`类路径.JNIOpKey(提供的接口).h`所在的文件目录下
 
 4.新建一个c++工程,选择按图中的的指示选择  
-图4   
+![](https://raw.githubusercontent.com/CryChan/JniDemo/master/pic/4.png)  
 新建一个source文件，要注意的是：在命名的时候要加上文件的后缀。在这个文件中编写java调用c++的接口，编写完成后，在project上选择build project。build完成后会生成一个.dll文件，把.dll文件用上述的方法放置。
 
 5.编写一个测试类，运行相关的接口
