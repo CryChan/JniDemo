@@ -1,6 +1,5 @@
-#Jni的简单使用  
-- demo的运行环境
-- 
+# Jni的简单使用  
+## demo的运行环境
 eclipse（j2ee）+ MinGW-w64 + CDT（plugin）  
 eclipse和CDT的安装这里就不赘述，主要说的是MinGW-w64的安装。
 MinGW-w64的安装：  
@@ -16,8 +15,7 @@ i686：32位的版本
 其中：`${MinGW-w64}:MinGW-w64的安装目录`  
 上述几步就是MinGW的安装和配置，只要正确安装好，后面的编译就不会有太多的错误
 
-- demo的建立
-- 
+## demo的建立
 1.新建一个java工程，在其中新建一个类`SayHelloToCpp`,这个类要包含一下代码：
   
 	static{  
@@ -39,8 +37,7 @@ i686：32位的版本
 
 5.编写一个测试类，运行相关的接口
 
-- 问题
-- 
+## 问题
 1.出现错误：Can't load IA 32-bit .dll on a AMD 64-bit platform  
 原因是C编译器生成的.dll文件是32位的，要重新安装一个64位的MinGW，然后重新生成一下文件就好了  
 
